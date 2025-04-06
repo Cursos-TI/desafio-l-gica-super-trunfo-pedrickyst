@@ -1,43 +1,87 @@
 #include <stdio.h>
-
-// Desafio Super Trunfo - Países
-// Tema 2 - Comparação das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de comparação de cartas de cidades. 
-// Siga os comentários para implementar cada parte do desafio.
-
+#include <stdlib.h>
+#include <time.h>
 int main() {
-    // Definição das variáveis para armazenar as propriedades das cidades
-    // Você pode utilizar o código do primeiro desafio
 
+    //Titulo do Jogo.
+    printf("*** Super Trunfo *** \n");
+    printf("*** Países ***");
+    printf("\n");
     
-    // Cadastro das Cartas:
-    // Implemente a lógica para solicitar ao usuário que insira os dados das cidades
-    // utilizando a função scanf para capturar as entradas.
-    // utilize o código do primeiro desafio
+    //informações basicas para o menu!
+    int opcao, player1, computador, valor1, valor2;
+    srand(time(0));
 
-    // Exemplo:
-    // printf("Digite o código da cidade: ");
-    // scanf("%s", codigo);
-    // 
-    // (Repita para cada propriedade)
+    //A apresentação do menu inicial do jogo.
+    printf("Menu Principal\n");
+    printf("1. Iniciar Jogo   2. Regras do Jogo    3. Sair \n");
+    printf("\n");
+    printf("Escolha uma Opção: ");
+    scanf("%d", &opcao);
+    printf("\n");
+    
+    
+    switch (opcao)
+    {
+    case 1:
+        break;
+    case 2:
+    printf("Este jogo consiste em desafiar seus amigos, ultilizando cartas. \n");
+    printf("Neste jogo iremos usar inrformações reais de cada País. \n");
+    printf("Ex; \n");
+    printf("1 = Africa, 2 = Alemanha! \n");
+    printf("Deseja continuar com jogo: \n");
+    scanf("%d", &opcao);
+        break;
+    case 3:
+        printf("Sair\n");
+        printf("Vamos voltar ao jogo: \n");
+        scanf("%d", &opcao);
+        break;   
+        default:
+        printf("Código Inexistente!\n");
+        return 0;
+        break;
+    }
+    switch (opcao)
+    {
+    case 1:
+        printf("Carregando jogo...\n");
+        break;
+    case 2:
+        printf("You Lose!\n");
+        return 0;
+        break;
+    
+    default:
+    printf("Código Inexistente!");
+        return 0;
+        break;
+    }
+    
+    int carta;
 
-    // Comparação de Cartas:
-    // Desenvolva a lógica de comparação entre duas cartas.
-    // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
+    printf("\n");
+    printf("Escolha sua carta: ");
+    scanf("%d", &carta);
+    printf("\n");
 
-    // Exemplo:
-    // if (populacaoA > populacaoB) {
-    //     printf("Cidade 1 tem maior população.\n");
-    // } else {
-    //     printf("Cidade 2 tem maior população.\n");
-    // }
-
-    // Exibição dos Resultados:
-    // Após realizar as comparações, exiba os resultados para o usuário.
-    // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
-
-    // Exemplo:
-    // printf("A cidade vencedora é: %s\n", cidadeVencedora);
+    //Lugar reservado para a escolha da carta("Estado!").
+    switch (carta)
+    {
+    case 1:
+       printf("África \n");
+        break;
+    case 2:
+        printf("Alemanha \n");
+         break;
+    
+    default:
+        break;
+    }
+    
+    
 
     return 0;
+    
 }
