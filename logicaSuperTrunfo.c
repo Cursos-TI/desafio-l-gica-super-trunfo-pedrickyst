@@ -213,13 +213,13 @@ srand(time(0));
         //Área de comparação dos valores das cartas.
         printf("Comparação das cartas: \n");
         printf("\n");
-        printf("População: %u\n", populacao1 >= populacao2);
-        printf("Área: %d\n", area1 >= area2);
-        printf("P.I.B: %d\n", PIB1 >= PIB2);
-        printf("Pontos Turisticos: %d\n", pontos1 >= pontos2);
-        printf("Densidade Populacional: %d\n", densidade1 >= densidade2);
-        printf("Densidade Percapta: %d\n", densidadeP1 >= densidadeP2);
-        printf("Super Poder: %d\n", poder1 >= poder2);
+        printf("População: %u\n", populacao1 > populacao2);
+        printf("Área: %d\n", area1 > area2);
+        printf("P.I.B: %d\n", PIB1 > PIB2);
+        printf("Pontos Turisticos: %d\n", pontos1 > pontos2);
+        printf("Densidade Populacional: %d\n", densidade1 > densidade2);
+        printf("Densidade Percapta: %d\n", densidadeP1 > densidadeP2);
+        printf("Super Poder: %d\n", poder1 > poder2);
 
         printf("\n");
     float media;
@@ -236,7 +236,7 @@ srand(time(0));
             (poder1 >= poder2) && (poder1 == poder2)||
              (densidadeP1 == densidadeP2) && (densidadeP1 >= densidadeP2)){
              media = (populacao1 + area1 + PIB1 + pontos1 + densidade1 + poder1 + densidadeP1)  / 10000;
-             media = (populacao2 + area2 + PIB2 + pontos2 + densidade2 + poder2 + densidadeP2)  / 10000;
+             
              printf("Total em poder é: %.2f\n", media);
              
         printf("Jogador: venceu! \n");
