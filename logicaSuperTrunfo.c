@@ -6,6 +6,8 @@ int main(){
     printf("### SUPER TRUNFO ###");
 
 int jogador, computador, resultado, valor1, valor2, comp1, comp2, opcao, carta;
+float media;
+
 srand(time(0));
 
     char estado1;
@@ -47,7 +49,8 @@ srand(time(0));
         printf("Densidade Populacional x P.I.B Percapta = Vence a que tiver o maior valor.\n");
         printf("O Jogador além de escolher a carta, também escolherá o atributo a ser usado para batalhar.\n");
         printf("E que vença o melhor atributo!\n");
-        printf("Vamos retornar ao Jogo: \n");
+        printf("\n");
+        printf("Vamos retornar ao Jogo: ");
         scanf("%d", &opcao);
         break;
     case 3:
@@ -76,6 +79,7 @@ srand(time(0));
         break;
     }
 
+    printf("\n");
     printf("1. Holanda     2. Alemanha\n");
     printf("Escolha sua carta: ");
     scanf("%d", &carta);
@@ -85,15 +89,37 @@ srand(time(0));
     {
     case 1:
         printf("### Holanda ###\n");
+        printf("\n");
+        printf("Atributos!");
+        printf("\n");
+        printf("1. População: 1.400\n");
+        printf("2. Área: 41.528Km²\n");
+        printf("3. P.I.B: 1.154\n");
+        printf("4. Pontos Turisticos: 15\n");
+        printf("5. Densidade Populacional: 46.320\n");
+        printf("6. Densidade Percapta: 0.15\n");
+        printf("7. Poder: 31151.300\n");
         break;
     case 2:
         printf("### Alemanha ###\n");
+        printf("\n");
+        printf("Atributos!");
+        printf("\n");
+        printf("1. População: 8.328\n");
+        printf("2. Área: 357.021Km²\n");
+        printf("3. P.I.B: 4.526\n");
+        printf("4. Pontos Turisticos: 15\n");
+        printf("5. Densidade Populacional: 23326.35\n");
+        printf("6. Densidade Percapta: 1.84\n");
+        printf("7. Poder: 47984.96\n");
         break;
     default:
         printf("Código Inexistente!");
         return 0;
         break;
     }
+
+    printf("\n");
 
     printf("Atributo 1: ");
     scanf("%d", &valor1);
@@ -158,9 +184,8 @@ srand(time(0));
         }
         
         comp1 = rand() % 7 + 1;
-        comp2 = rand() % 6 + 1;
+        comp2 = rand() % 7 + 1;
 
-            printf("\n");
     switch (comp1) {
         case 1:
             printf("Computador:1 População / ");
@@ -218,13 +243,11 @@ srand(time(0));
         printf("P.I.B: %d\n", PIB1 > PIB2);
         printf("Pontos Turisticos: %d\n", pontos1 > pontos2);
         printf("Densidade Populacional: %d\n", densidade1 > densidade2);
-        printf("Densidade Percapta: %d\n", densidadeP1 > densidadeP2);
-        printf("Super Poder: %d\n", poder1 > poder2);
+        printf("Densidade Percapta: %d\n", densidadeP1 <= densidadeP2);
+        printf("Super Poder: %d\n", poder1 >= poder2);
 
         printf("\n");
-    float media;
-
-    
+        
     if (jogador == computador)
     {
         printf(" ### DROWNGAMER ###\n");
